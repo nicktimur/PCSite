@@ -23,7 +23,7 @@ builder.Services.AddEndpointsApiExplorer();
 
 // MySQL baðlantý dizesi ve sunucu versiyonu
 var connectionString = "Server=200.0.0.119;Port=3306;Database=satisdb;Uid=user;Pwd=1111;";
-var serverVersion = new MySqlServerVersion(new Version(8, 0, 38));
+var serverVersion = ServerVersion.AutoDetect(connectionString); //new MySqlServerVersion(new Version(8, 0, 38));
 
 // Veritabaný baðlamýnýn yapýlandýrýlmasý
 builder.Services.AddDbContext<SatisdbContext>(options =>
