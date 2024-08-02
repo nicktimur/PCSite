@@ -7,14 +7,18 @@ namespace PCSite.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly SatisdbContext _db;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, SatisdbContext db)
     {
         _logger = logger;
+        _db = db;
     }
 
     public IActionResult Index()
     {
+        Kullanici kullanici = _db.Kullanicis.FirstOrDefault();
+        ViewBag.Kullanici = kullanici;
         return View();
     }
 
