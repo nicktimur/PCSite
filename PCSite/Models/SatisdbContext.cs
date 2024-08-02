@@ -122,13 +122,13 @@ public partial class SatisdbContext : DbContext
             entity.Property(e => e.Deger).HasMaxLength(255);
 
             entity.HasOne(uo => uo.Urun)
-                .WithMany(u => u.UrunOzellikleri)
-                .HasForeignKey(uo => uo.UrunId)
+                .WithMany(u => u.UrunOzelliks)
+                .HasForeignKey(uo => uo.Id)
                 .HasConstraintName("urunozellik_ibfk_1");
 
             entity.HasOne(uo => uo.Ozellik)
-                .WithMany(o => o.UrunOzellikleri)
-                .HasForeignKey(uo => uo.OzellikId)
+                .WithMany(o => o.UrunOzelliks)
+                .HasForeignKey(uo => uo.Id)
                 .HasConstraintName("urunozellik_ibfk_2");
         });
 
