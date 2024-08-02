@@ -17,10 +17,10 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true; // GDPR ve diðer veri koruma düzenlemeleri için gerekli
 });
 builder.Services.AddEndpointsApiExplorer();
-var connectionString = "Server=localhost;User ID=root;Password=1111;Database=cinemadb";
+var connectionString = "Server=200.0.0.119;User ID=user;Password=1111;Database=satisdb";
 var serverVersion = new MySqlServerVersion(new Version(8, 0, 38));
-/*builder.Services.AddDbContext<CinemadbContext>(options =>
-    options.UseMySql(connectionString, serverVersion));*/
+builder.Services.AddDbContext<SatisdbContext>(options =>
+    options.UseMySql(connectionString, serverVersion));
 
 
 // Add services to the container.
