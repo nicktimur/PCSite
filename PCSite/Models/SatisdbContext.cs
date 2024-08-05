@@ -29,7 +29,7 @@ public partial class SatisdbContext : DbContext
     public DbSet<UrunOzellik> UrunOzelliks { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseMySql("server=localhost;user id=root;password=1111;database=satisdb", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.38-mysql"));
+        => optionsBuilder.UseMySql("Server=200.0.0.119;Port=3306;Database=satisdb;Uid=user;Pwd=1111;", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.38-mysql"));
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
