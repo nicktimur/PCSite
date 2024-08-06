@@ -120,30 +120,39 @@ button{
 
     </style>
 </head>
+@model KullaniciAddingModel;
 <body>
     <div class="background">
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form>
+    <form method="post" asp-action="Kayit">
         <h3>Kayıt Ol</h3>
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @if (ViewBag.Message != null)
+        {
+            <div class="form-group" style="color: green;">@ViewBag.Message</div>
+        }
         <label for="Ad">İsim </label>
-        <input type="text" placeholder="İsminizi Giriniz" id="name">
+        <input asp-for="Ad" type="text" placeholder="İsminizi Giriniz" id="name">
 
         <label for="soyad">Soyad </label>
-        <input type="text" placeholder="Soyadınızı Giriniz" id="surname">
+        <input  asp-for="Soyad" placeholder="Soyadınızı Giriniz" id="surname">
    
-        <label for="username">Eposta Adresiniz</label>
-        <input type="text" placeholder="E-posta Adresinizi Giriniz" id="email">
+        <label for="email">E-posta Adresiniz</label>
+        <input asp-for="Email" placeholder="E-posta Adresinizi Giriniz" id="email">
 
-        <label for="phone">Telefon Numarası</label>
-        <input type="tel" placeholder="123-123-1212" id="phone" name="phone"
-               maxlength="12" required>
+        <label for="email">Telefon Numaranız</label>
+        <input asp-for="TelefonNumarasi" placeholder="Telefon Numarası" id="phone">
 
         <label for="password">Şifre</label>
-        <input type="password" placeholder="Şifre" id="password">
+        <input asp-for="Sifre" type="password" placeholder="Şifre" id="password">
 
-        <button>Kayıt Ol</button>
+        <div class="col-8">
+            <a asp-controller="Kullanici" asp-action="Giris" class="text-center">Bir hesabım var.</a>
+        </div>
+
+        <button type="submit" >Kayıt Ol</button>
     </form>
 </body>
 <script>
@@ -156,5 +165,5 @@ button{
         }
         e.target.value = input;
     });
-    </script>
+</script>
 </html>

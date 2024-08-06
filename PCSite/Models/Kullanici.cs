@@ -25,7 +25,7 @@ public partial class Kullanici
 
     public string? Adres { get; set; }
 
-    public int? TelefonNumarasi { get; set; }
+    public string TelefonNumarasi { get; set; }
 
     public virtual ICollection<Sepet> Sepets { get; set; } = new List<Sepet>();
 }

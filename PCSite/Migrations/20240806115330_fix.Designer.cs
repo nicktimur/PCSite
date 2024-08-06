@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PCSite.Models;
 
@@ -11,9 +12,11 @@ using PCSite.Models;
 namespace PCSite.Migrations
 {
     [DbContext(typeof(SatisdbContext))]
-    partial class SatisdbContextModelSnapshot : ModelSnapshot
+    [Migration("20240806115330_fix")]
+    partial class fix
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -255,15 +258,13 @@ namespace PCSite.Migrations
                         .WithMany("UrunOzelliks")
                         .HasForeignKey("Id")
                         .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
-                        .HasConstraintName("urunozellik_ibfk_2");
+                        .IsRequired();
 
                     b.HasOne("PCSite.Models.Urun", "Urun")
                         .WithMany("UrunOzelliks")
                         .HasForeignKey("Id")
                         .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
-                        .HasConstraintName("urunozellik_ibfk_1");
+                        .IsRequired();
 
                     b.Navigation("Ozellik");
 
