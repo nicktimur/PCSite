@@ -37,7 +37,7 @@ body{
     border-radius: 50%;
 }
 form{
-    height: 720px;
+    height: 800px;
     width: 400px;
     background-color: rgba(255,255,255,0.13);
     position: absolute;
@@ -127,24 +127,34 @@ button{
     </div>
     <form>
         <h3>Kayıt Ol</h3>
+        <label for="Ad">İsim </label>
+        <input type="text" placeholder="İsminizi Giriniz" id="name">
 
-        <label for="username">Kullanıcı Adı </label>
-        <input type="text" placeholder="Kullanıcı Adınızı Giriniz" id="username">
-        
+        <label for="soyad">Soyad </label>
+        <input type="text" placeholder="Soyadınızı Giriniz" id="surname">
+   
         <label for="username">Eposta Adresiniz</label>
-        <input type="text" placeholder="Eposta Adresinizi Giriniz" id="email">
+        <input type="text" placeholder="E-posta Adresinizi Giriniz" id="email">
+
+        <label for="phone">Telefon Numarası</label>
+        <input type="tel" placeholder="123-123-1212" id="phone" name="phone"
+               maxlength="12" required>
 
         <label for="password">Şifre</label>
-        <input type="password" placeholder="Password" id="password">
-
-        <label for="password">Tekrar Şifre</label>
-        <input type="password" placeholder="Password" id="password">
+        <input type="password" placeholder="Şifre" id="password">
 
         <button>Kayıt Ol</button>
-        <div class="social">
-          <div class="go"><a href="login.html">Giriş Yap</a> </div>
-          <div class="fb"><i class="fab fa-facebook"></i>  <a href="#">Facebook</a></div>
-        </div>
     </form>
 </body>
+<script>
+    document.getElementById('phone').addEventListener('input', function (e) {
+        let input = e.target.value.replace(/\D/g, ''); // Sadece rakamları al
+        if (input.length > 3 && input.length <= 6) {
+            input = input.slice(0, 3) + '-' + input.slice(3);
+        } else if (input.length > 6) {
+            input = input.slice(0, 3) + '-' + input.slice(3, 6) + '-' + input.slice(6, 10);
+        }
+        e.target.value = input;
+    });
+    </script>
 </html>
