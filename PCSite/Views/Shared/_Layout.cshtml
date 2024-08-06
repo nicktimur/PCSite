@@ -1,58 +1,399 @@
-﻿
+﻿<!DOCTYPE html>
+<html lang="zxx">
 
-
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - PCSite</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/PCSite.styles.css" asp-append-version="true" />
+	<!-- Meta Tag -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name='copyright' content=''>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Title Tag  -->
+	<title>Bilgisayar Satış</title>
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="images/favicon.png">
+
+	<!-- Web Font -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+		  rel="stylesheet">
+
+	<!-- Reset CSS -->
+	<link rel="stylesheet" href="/css/reset.css">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="/css/bootstrap.css">
+
+	<!-- Animate CSS -->
+	<link rel="stylesheet" href="/css/animate.css">
+
+	<!-- Flex Slider CSS -->
+	<link rel="stylesheet" href="/css/flex-slider.min.css">
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/css/font-awesome.css">
+
+	<!-- Fancybox -->
+	<link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/css/magnific-popup.css">
+
+	<!-- Nice Select CSS -->
+	<link rel="stylesheet" href="/css/nice-select.css">
+
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="/css/owl-carousel.css">
+
+	<!-- jQuery UI -->
+	<link rel="stylesheet" href="/css/jquery-ui.css">
+
+	<!-- Themify Icons -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/themify-icons/1.0.1/css/themify-icons.css">
+
+
+	<!-- Slicknav -->
+	<link rel="stylesheet" href="/css/slicknav.min.css">
+
+	<!-- Site Specific CSS -->
+	<link rel="stylesheet" href="/css/site.css">
+
+	<!-- Responsive CSS -->
+	<link rel="stylesheet" href="/css/responsive.css">
+
+	<!-- Main Style CSS -->
+	<link rel="stylesheet" href="/css/style.css">
+
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">PCSite</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Kullanici" asp-action="Kayit">KayitOl</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Kullanici" asp-action="Giris">KayitOl</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+
+<body class="js">
+
+	<!-- Preloader -->
+	<div class="preloader">
+		<div class="preloader-inner">
+			<div class="preloader-icon">
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
+	<!-- End Preloader -->
+	<!-- Header -->
+	<header class="header shop">
+		<!-- Topbar -->
+		<div class="topbar">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5 col-md-12 col-12">
+						<!-- Top Left -->
+						<div class="top-left">
+							<ul class="list-main">
+								<li><i class="ti-headphone-alt"></i> 0505 07* 4*49</li>
+								<li><i class="ti-email"></i> bilgisayarsatis@destek.com</li>
+								<li><i class="ti-heart"></i>Kalpler</li>
+							</ul>
+						</div>
+						<!--/ End Top Left -->
+					</div>
+					<div class="col-lg-7 col-md-12 col-12">
+						<!-- Top Right -->
+						<div class="right-content">
+							<ul class="list-main">
+								<li><i class="ti-location-pin"></i> Ankara Bilkent CyberPark</li>
+								<li><i class="ti-alarm-clock"></i> <a href="#">İndirimler</a></li>
+								<li><i class="ti-user"></i> <a href="#">Hesabım</a></li>
+								<li><i class="ti-power-off"></i><a href="login.html#">Giriş Yap</a></li>
+							</ul>
+						</div>
+						<!-- End Top Right -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Topbar -->
+		<div class="middle-inner">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2 col-md-2 col-12">
+						<!-- Logo -->
+						<div class="logo">
+							<a href="index.html"><img src="images/dragon-eye-3235673_960_720.webp" alt="logo"></a>
+						</div>
+						<!--/ End Logo -->
+						<!-- Search Form -->
+						<div class="search-top">
+							<div class="top-search"><a href="#0"><i class="ti-search"></i></a></div>
+							<!-- Search Form -->
+							<div class="search-top">
+								<form class="search-form">
+									<input type="text" placeholder="Search here..." name="search">
+									<button value="search" type="submit"><i class="ti-search"></i></button>
+								</form>
+							</div>
+							<!--/ End Search Form -->
+						</div>
+						<!--/ End Search Form -->
+						<div class="mobile-nav"></div>
+					</div>
+					<div class="col-lg-8 col-md-7 col-12">
+						<div class="search-bar-top">
+							<div class="search-bar">
+
+								<form>
+									<input name="search" placeholder="Bir Ürün Adı Giriniz....." type="search">
+									<button class="btnn"><i class="ti-search"></i></button>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-3 col-12">
+						<div class="right-bar">
+							<!-- Search Form -->
+							<div class="sinlge-bar">
+								<a href="#" class="single-icon"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+							</div>
+							<div class="sinlge-bar">
+								<a href="#" class="single-icon">
+									<i class="fa fa-user-circle-o"
+									   aria-hidden="true"></i>
+								</a>
+							</div>
+							<div class="sinlge-bar shopping">
+								<a href="#" class="single-icon">
+									<i class="ti-bag"></i> <span class="total-count">DB</span>
+								</a>
+								<!-- Shopping Item -->
+								<div class="shopping-item">
+									<div class="dropdown-cart-header">
+										<span>/*sepetdb*/</span>
+										<a href="#">Sepeti Görüntüle</a>
+									</div>
+									<ul class="shopping-list">
+										<li>
+											<a href="#" class="remove" title="Remove this item">
+												<i class="fa fa-remove"></i>
+											</a>
+											<a class="cart-img" href="#"><img src="images/aerox.png" alt="#"></a>
+											<h4><a href="#">Aerox Gaming Mause</a></h4>
+											<p class="quantity">1x - <span class="amount">FİYATDB</span></p>
+										</li>
+									</ul>
+									<div class="bottom">
+										<div class="total">
+											<span>Toplam</span>
+											<span class="total-amount">TOPLAMFİYATDB</span>
+										</div>
+										<a href="checkout.html" class="btn animate">Satın Al</a>
+									</div>
+								</div>
+								<!--/ End Shopping Item -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Header Inner -->
+		<div class="header-inner">
+			<div class="container">
+				<div class="cat-nav-head">
+					<div class="row">
+						<div class="col-lg-3">
+							<div class="all-category">
+								<h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i>Kategoriler</h3>
+								<ul class="main-category">
+									<li>
+										<a href="#">Ürünler <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+										<ul class="sub-category">
+											<li><a href="#">Monitör</a></li>
+											<li><a href="#">Gaming Kasa</a></li>
+											<li><a href="#">Gaming Laptop</a></li>
+											<li><a href="#">Kulaklık</a></li>
+											<li><a href="#">Klavye</a></li>
+											<li><a href="#">Mause</a></li>
+										</ul>
+									</li>
+							</div>
+						</div>
+						<div class="col-lg-9 col-12">
+							<div class="menu-area">
+								<!-- Main Menu -->
+								<nav class="navbar navbar-expand-lg">
+									<div class="navbar-collapse">
+										<div class="nav-inner">
+											<ul class="nav main-menu menu navbar-nav">
+												<li class="active"><a href="#">Ana Sayfa</a></li>
+												<li><a href="#">Ürünler</a></li>
+												<li><a href="#">Teknik Servis</a></li>
+												<li>
+													<a href="#">Bilgilendirme<i class="ti-angle-down"></i></a>
+													<ul class="dropdown">
+														<li><a href="#">Biz Kimiz?</a></li>
+														<li><a href="#">Vergi Levhası</a></li>
+														<li><a href="#">Kargolama</a></li>
+														<li><a href="#">Ürün Bakımları</a></li>
+													</ul>
+												</li>
+												<li><a href="contact.html">İletişim Adreslerimiz </a></li>
+											</ul>
+										</div>
+									</div>
+								</nav>
+								<!--/ End Main Menu -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/ End Header Inner -->
+	</header>
+	<!--/ End Header -->
+	</section>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - PCSite - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+	<!-- Start Footer Area -->
+	<footer class="footer">
+		<!-- Footer Top -->
+		<div class="footer-top section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5 col-md-6 col-12">
+						<!-- Single Widget -->
+						<div class="single-footer about">
+							<div class="logo">
+								<a href="index.html"><img src="images/logo2.png" alt="#"></a>
+							</div>
+							<p class="text">
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui iusto
+								exercitationem commodi tenetur quisquam adipisci non! Veritatis adipisci laborum quaerat
+								nemo, voluptate optio voluptatem error qui, ut recusandae, nihil quis.
+							</p>
+							<p class="call">
+								24/7 Destek Numarası<span>
+									<a href="tel: 0505 07* 4*49">
+										0505 07*
+										4*49
+									</a>
+								</span>
+							</p>
+						</div>
+						<!-- End Single Widget -->
+					</div>
+					<div class="col-lg-2 col-md-6 col-12">
+						<!-- Single Widget -->
+						<div class="single-footer links">
+							<h4>Bilgilendirme</h4>
+							<ul>
+								<li><a href="#">Hakkımızda</a></li>
+								<li><a href="#">Faq</a></li>
+								<li><a href="#">Şartlar Ve Koşullar</a></li>
+								<li><a href="#">İletişim</a></li>
+								<li><a href="#">Destek</a></li>
+							</ul>
+						</div>
+						<!-- End Single Widget -->
+					</div>
+					<div class="col-lg-2 col-md-6 col-12">
+						<!-- Single Widget -->
+						<div class="single-footer links">
+							<h4>Destek</h4>
+							<ul>
+								<li><a href="#">Ödeme Yöntemleri</a></li>
+								<li><a href="#">İade İşlemleri</a></li>
+								<li><a href="#">Kargolama</a></li>
+								<li><a href="#">Gizlilik Politikası</a></li>
+							</ul>
+						</div>
+						<!-- End Single Widget -->
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Single Widget -->
+						<div class="single-footer social">
+							<h4>Adresimiz</h4>
+							<!-- Single Widget -->
+							<div class="contact">
+								<ul>
+									<li>Ankara Yenimahalle CyberPark</li>
+									<li>Türkiye</li>
+									<li>bilgisayarsatis@destek.com</li>
+									<li>0505 07* 4*49</li>
+								</ul>
+							</div>
+							<!-- End Single Widget -->
+							<ul>
+								<li><a href="#"><i class="ti-facebook"></i></a></li>
+								<li><a href="#"><i class="ti-twitter"></i></a></li>
+								<li><a href="#"><i class="ti-flickr"></i></a></li>
+								<li><a href="#"><i class="ti-instagram"></i></a></li>
+							</ul>
+						</div>
+						<!-- End Single Widget -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Footer Top -->
+		<div class="copyright">
+			<div class="container">
+				<div class="inner">
+					<div class="row">
+						<div class="col-lg-6 col-12">
+							<div class="left">
+								<p>
+									Copyright © 2024 <a href="http://www.wpthemesgrid.com"
+							 target="_blank">BilgisayarSatis</a> - Tüm Hakları Saklıdır
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-12">
+							<div class="right">
+								<img src="images/payments.png" alt="#">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- /End Footer Area -->
+	<!-- Jquery -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.0.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<!-- Popper JS -->
+	<script src="js/popper.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Color JS -->
+	<script src="js/colors.js"></script>
+	<!-- Slicknav JS -->
+	<script src="js/slicknav.min.js"></script>
+	<!-- Owl Carousel JS -->
+	<script src="js/owl-carousel.js"></script>
+	<!-- Magnific Popup JS -->
+	<script src="js/magnific-popup.js"></script>
+	<!-- Waypoints JS -->
+	<script src="js/waypoints.min.js"></script>
+	<!-- Countdown JS -->
+	<script src="js/finalcountdown.min.js"></script>
+	<!-- Nice Select JS -->
+	<script src="js/nicesellect.js"></script>
+	<!-- Flex Slider JS -->
+	<script src="js/flex-slider.js"></script>
+	<!-- ScrollUp JS -->
+	<script src="js/scrollup.js"></script>
+	<!-- Onepage Nav JS -->
+	<script src="js/onepage-nav.min.js"></script>
+	<!-- Easing JS -->
+	<script src="js/easing.js"></script>
+	<!-- Active JS -->
+	<script src="js/active.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>
