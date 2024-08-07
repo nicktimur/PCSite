@@ -5,7 +5,6 @@ namespace PCSite.Models;
 
 public partial class KullaniciAddingModel
 {
-    public int Id { get; set; }
 
     public string Ad { get; set; }
 

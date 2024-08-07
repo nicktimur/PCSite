@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿﻿@{
+	var user = Context.Items["CurrentUser"] as Kullanici;
+}
+<!DOCTYPE html>
 <html lang="zxx">
 
 <head>
@@ -101,8 +104,14 @@
 							<ul class="list-main">
 								<li><i class="ti-location-pin"></i> Ankara Bilkent CyberPark</li>
 								<li><i class="ti-alarm-clock"></i> <a href="#">İndirimler</a></li>
-								<li><i class="ti-user"></i> <a href="#">Hesabım</a></li>
+								@if (user is not null)
+								{
+									<li><i class="ti-user"></i> <a href="#">@user.Ad @user.Soyad</a></li>
+								}
+								else
+								{
 								<li><i class="ti-power-off"></i><a asp-controller="Kullanici" asp-action="Giris">Giriş Yap</a></li>
+								}
 							</ul>
 						</div>
 						<!-- End Top Right -->

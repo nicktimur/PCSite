@@ -133,25 +133,30 @@
 
     </style>
 </head>
+@model KullaniciLoginModel;
 <body>
     <div class="background">
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form>
+    <form method="post" asp-action="Giris">
         <h3>Giriş Yap</h3>
-
-        <label for="email">E-posta Adresi</label>
-        <input type="text" placeholder="E-posta Adresiniz" id="email">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @if (ViewBag.Message != null)
+        {
+            <div class="form-group" style="color: green;">@ViewBag.Message</div>
+        }
+        <label >E-posta Adresi</label>
+        <input asp-for="Email" type="text" placeholder="E-posta Adresiniz" id="email">
 
         <label for="password">Şifre</label>
-        <input type="password" placeholder="Şifre" id="password">
+        <input asp-for="Sifre" type="password" placeholder="Şifre" id="password">
 
         <br />
         <div class="col-8">
             <a asp-controller="Kullanici" asp-action="Kayit" class="text-center">Bir hesap oluşturmak istiyorum.</a>
         </div>
-        <button>Giriş Yap</button>
+        <button type="submit">Giriş Yap</button>
     </form>
 </body>
 </html>

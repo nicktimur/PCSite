@@ -27,6 +27,8 @@ namespace PCSite.Controllers
         {
             return View();
         }
+
+        [SessionAuthorize(false)]
         public IActionResult Kayit()
         {
             return View();
@@ -78,8 +80,43 @@ namespace PCSite.Controllers
                 return View(kullanici);
         }
 
+        [SessionAuthorize(false)]
         public IActionResult Giris()
         {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Giris(KullaniciLoginModel kullanici)
+        {
+            if (kullanici is not null)
+            {
+                var user = _db.Kullanicis.Where(x => x.Email == kullanici.Email).FirstOrDefault();
+                if(user is not null)
+                {
+                    if (user.Sifre == kullanici.Sifre)
+                    {
+                        var userJson = JsonConvert.SerializeObject(user);
+                        HttpContext.Session.SetString("user", userJson);
+                        if (user.KullaniciTipi == 0)
+                        {
+                            return RedirectToAction("Index", "Home");
+                        }
+                        else
+                        {
+                            return RedirectToAction("Index", "Admin");
+                        }
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Kullanıcı adı veya şifre hatalı.");
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Böyle bir kullanıcı bulunmamakta!");
+                }
+            }
             return View();
         }
     }

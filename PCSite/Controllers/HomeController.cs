@@ -15,10 +15,9 @@ public class HomeController : Controller
         _db = db;
     }
 
+    [SendUserInfo]
     public IActionResult Index()
     {
-        Kullanici kullanici = _db.Kullanicis.FirstOrDefault();
-        ViewBag.Kullanici = kullanici;
         return View();
     }
 
@@ -31,10 +30,5 @@ public class HomeController : Controller
     public IActionResult Error()
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-    }
-
-    public IActionResult AnaSayfa()
-    {
-        return View();
     }
 }
